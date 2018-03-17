@@ -1,0 +1,115 @@
+\documentclass{ucam-thesis}
+%%=========================================================
+%%           Packages used for  the content of thesis should be kept out of the class.
+%% =========================================================
+\usepackage{blkarray,stackengine,tikz,trimclip}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{placeins}
+\usepackage{textcomp}
+\usepackage{algorithm} 
+\usepackage{algorithmic}  
+\usepackage[algo2e]{algorithm2e} 
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tabularx, booktabs}
+\usepackage{makecell}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{W}{>{\raggedleft\arraybackslash}X}
+\newtheorem{theorem}{Theorem}
+\newtheorem{condition}{Condition}
+\savestack\uppertriangle{%
+\begin{tikzpicture}
+  \node[outer sep=1in] (earmark) {};
+  \draw[blue!40, fill, opacity=0.60] (earmark.north west) -- (earmark.south east) --   (earmark.north east)-- (earmark.north west);
+  \end{tikzpicture}%
+}
+
+
+
+
+\addbibresource{references.bib}
+
+%% ===========================================================================
+%%                          B E G I N    D O C U M E N T
+%% ===========================================================================
+\begin{document}
+\renewcommand{\bibname}{Bibliographie}
+
+
+%%% ===================================
+%%%              Cover page
+%%% ===================================
+\input{frontmatter/coverpage}
+\maketitle
+\copyrightpage
+%%% ============================================
+%%%        Abstracts : In French and English
+%%% ============================================
+\abstractpageFR
+\abstractpage
+
+
+%%% ============================================
+%%%        Dedication and acknowledgments
+%%% ============================================
+\dedicationpage
+\acknowledgments
+
+
+%%% ============================================
+%%%        Table of contents (ToC)
+%%% ============================================
+\tableofcontents
+\clearpage
+
+%%% =================================================
+%%%     Acronyms and Lists of Figures and tables.
+%%% =================================================
+\listoffigures
+\clearpage
+\listoftables
+\Acronyms
+
+\clearpage
+
+%%% ============================================
+%%%               Chapters
+%%% ============================================
+
+\pagenumbering{arabic}
+
+\input{Chapters/chapter1}
+\input{Chapters/chapter2}
+\input{Chapters/chapter3}
+\input{Chapters/chapter4}
+\input{Chapters/chapter5}
+\input{Chapters/chapter6}
+
+
+
+
+
+%%% ============================================
+%%%            Appendices
+%%% ============================================
+\appendix
+\input{endmatter/appendix1}
+\input{endmatter/appendix2}
+
+
+%%% ============================================
+%%%            Bibliography
+%%% ============================================
+% the back matter
+\clearpage
+%\printbibliography
+
+\printbibheading
+\bibbycategory
+
+
+\end{document}
+%% ===========================================================================
+%%                          E N D    D O C U M E N T
+%% ===========================================================================
