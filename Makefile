@@ -14,7 +14,7 @@ LT=~/lt/LanguageTool-3.7/languagetool-commandline.jar
 
 all: $(MAIN).pdf
 
-$(MAIN).pdf: *.tex
+pdf:   
 	$(TEX) $(MAIN)
 	$(BIB) $(MAIN).aux
 	$(TEX) $(MAIN)
