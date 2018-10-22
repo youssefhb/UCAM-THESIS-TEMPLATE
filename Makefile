@@ -14,11 +14,12 @@ LT=~/lt/LanguageTool-3.7/languagetool-commandline.jar
 
 all: $(MAIN).pdf
 
-pdf:   
+$(MAIN).pdf: *.tex
 	$(TEX) $(MAIN)
 	$(BIB) $(MAIN).aux
 	$(TEX) $(MAIN)
 	$(TEX) $(MAIN)
+	
 
 clean:
 	find -regex '.*\.\(aux\|log\|lot\|lof\|bbl\|out\|toc\|blg\|brf\|ptc\|gz\|bcf\|run.xml\|fls\|dvi\|mtc\|mtc0\|maf\)'  -exec rm {} \; 
