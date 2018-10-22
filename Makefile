@@ -17,18 +17,16 @@ all: $(MAIN).pdf
 $(MAIN).pdf: *.tex
 	$(TEX) $(MAIN)
 	$(BIB) $(MAIN).aux
-	$(TEX) $(MAIN)
-	$(TEX) $(MAIN)
+	$(TEX) $(MAIN)	
 	
-
 clean:
-	find -regex '.*\.\(aux\|log\|lot\|lof\|bbl\|out\|toc\|blg\|brf\|ptc\|gz\|bcf\|run.xml\|fls\|dvi\|mtc\|mtc0\|maf\)'  -exec rm {} \; 
-	find .  -name  $(MAIN).pdf      -exec rm {} \;
+	find -regex '.*\.\(aux\|log\|lot\|lof\|bbl\|out\|toc\|blg\|brf\|ptc\|gz\|bcf\|run.xml\|fls\|dvi\|mtc\|mtc0\|maf\)'  -exec rm {} \; 	
 	find .  -name  $(MAIN)-blx.bib  -exec rm {} \;
 
   
 clean-figures:  
 	find  Figures/chap*     -name *-converted-to.pdf   -exec rm {} \;
+	find  Logo              -name *-converted-to.pdf   -exec rm {} \;
 
 
 
