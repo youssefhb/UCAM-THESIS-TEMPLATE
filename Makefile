@@ -20,8 +20,8 @@ $(MAIN).pdf: *.tex
 	$(TEX) $(MAIN)	
 	
 clean:
-	find -regex '.*\.\(aux\|log\|lot\|lof\|bbl\|out\|toc\|blg\|brf\|ptc\|gz\|bcf\|run.xml\|fls\|dvi\|mtc\|mtc0\|maf\)'  -exec rm {} \; 	
-	find .  -name  $(MAIN)-blx.bib  -exec rm {} \;
+	find -regex '.*\.\(aux\|log\|lot\|lof\|bbl\|out\|toc\|blg\|brf\|ptc\|gz\|bcf\|run.xml\|fls\|dvi\|mtc\|mtc0\|maf\|pdf\)'  -exec rm {} \; 	
+	find .  -name  $(MAIN)-blx.bib   -exec rm {} \;
 
   
 clean-figures:  
