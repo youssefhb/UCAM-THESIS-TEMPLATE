@@ -1,6 +1,6 @@
 # UCAM-THESIS-TEMPLATE
 ucam-thesis est un template de l'université CADI AYYAD pour la rédaction des rapports de thèse.
-La compilation du code latex peut se faire à partir d'une ligne de commande, à l'aide du fichier Makefile fourni :
+La compilation du code latex peut se faire à partir de la ligne de commande et à l'aide du fichier Makefile fourni :
 
 make clean && make -j8
 
